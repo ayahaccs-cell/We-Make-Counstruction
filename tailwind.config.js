@@ -1,4 +1,4 @@
-/** Palette: bone surface, obsidian type, navy/royal blue from the We Make logo. */
+/** Palette: bone surface, obsidian type, navy and azure sampled from the We Make logo. */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
@@ -6,8 +6,8 @@ export default {
       colors: {
         bone: "#F5F5F3",
         obsidian: "#111111",
-        navy: "#003366",
-        royal: "#0066CC",
+        navy: "#002C6C",
+        royal: "#0094E8",
       },
       fontFamily: {
         sans: ['"Inter Tight"', "Inter", "system-ui", "sans-serif"],
