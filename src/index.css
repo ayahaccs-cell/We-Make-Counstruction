@@ -8,15 +8,22 @@ html {
 }
 
 body {
-  @apply bg-bone font-sans text-obsidian antialiased;
-  letter-spacing: -0.01em;
+  @apply bg-stone-canvas font-sans font-light text-espresso antialiased;
+}
+
+/* Display serif: thin, tight, editorial. */
+.serif-display {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 0.92;
 }
 
 /* Scroll reveal, toggled once by IntersectionObserver. */
 .reveal {
   opacity: 0;
   transform: translateY(1.5rem);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
   transition-delay: var(--d, 0ms);
 }
 .reveal.is-in {
@@ -27,14 +34,14 @@ body {
 /* Hero image: CSS-only settle on mount. */
 @keyframes settle {
   from {
-    transform: scale(1.06);
+    transform: scale(1.07);
   }
   to {
     transform: scale(1);
   }
 }
 .hero-img {
-  animation: settle 1.6s ease-out both;
+  animation: settle 2.2s ease-out both;
   will-change: transform;
 }
 
