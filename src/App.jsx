@@ -342,19 +342,21 @@ function Hero() {
         <h1 className="sr-only">We Make Constructions Co. WLL</h1>
 
         {/* 3. foreground subject, in front of the type */}
-        <img
-          src="/images/hero-cutout.png"
-          alt="A We Make paving specialist laying interlock paving"
-          className="hero-layer pointer-events-none absolute bottom-[17%] right-[4%] z-0 h-[46%] w-auto max-w-none sm:right-[22%] sm:h-[58%] lg:bottom-[15%] lg:right-[27%] lg:h-[64%]"
-          style={{ "--k": 0.06 }}
-          loading="eager"
-        />
+        <div className="pointer-events-none absolute inset-x-0 bottom-[11%] z-0 flex justify-center sm:bottom-[10%] lg:right-[8%] lg:left-0 lg:bottom-[1%]">
+          <img
+            src="/images/hero-cutout.png"
+            alt="A We Make site engineer in a branded hard hat recording notes on site"
+            className="hero-layer h-[58svh] w-auto max-w-none sm:h-[66svh] lg:h-[67svh]"
+            style={{ "--k": 0.06 }}
+            loading="eager"
+          />
+        </div>
         <div className="absolute inset-x-0 bottom-0 z-[1] h-[48%] bg-gradient-to-t from-concrete-black via-concrete-black/70 to-transparent" aria-hidden="true" />
 
         {/* nav */}
         <header className="absolute inset-x-0 top-0 z-30 flex items-start justify-between px-5 pt-5 sm:px-8 sm:pt-7">
           <a href="#top" aria-label="We Make Constructions, home">
-            <img src="/images/logo-light.png" alt="We Make Constructions" className="h-12 w-auto sm:h-14" />
+            <img src="/images/logo-light.png" alt="We Make Constructions" className="h-14 w-auto sm:h-[4.25rem]" />
           </a>
           <nav className="hidden items-center gap-10 pt-2 text-[10px] uppercase tracking-widest md:flex lg:gap-14" aria-label="Primary">
             {NAV.map(([l, h]) => (
@@ -787,7 +789,7 @@ function Contact() {
           <p className="max-w-xs text-[11px] font-light leading-relaxed text-concrete-white/65 lg:ml-auto lg:mr-[8%]">
             Leave your contact details, and our team will get in touch to guide you through the process, discuss your scope, and arrange a site visit.
           </p>
-          <Img src="/images/projects/road-works-1.jpg" alt="Interlock road with kerbs in a Bahrain residential area" className="mt-8 aspect-[16/10] rounded-[26px]" position="center 55%" />
+          <Img src="/images/projects/contact-site.jpg" alt="We Make crew inside a concrete building shell on site" className="mt-8 aspect-[4/5] rounded-[26px] sm:aspect-[5/4] lg:aspect-[4/5]" position="center 40%" />
         </Reveal>
       </div>
     </section>
