@@ -1,20 +1,19 @@
-/** Warm architectural system from the reference; navy and azure sampled from the We Make logo. */
+/** Silva-style palette: shades of raw concrete and alpine stone, nothing else. */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
-        stone: {
-          canvas: "#EBE7DF",
-          line: "#D6D0C5",
+        concrete: {
+          white: "#FFFFFF",
+          light: "#E4E4E4",
+          mid: "#949494",
+          stone: "#2F2F2F",
+          black: "#000000",
         },
-        espresso: "#1C1917",
-        navy: "#002C6C",
-        royal: "#0094E8",
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', "Georgia", "serif"],
-        sans: ['"DM Sans"', "system-ui", "sans-serif"],
+        sans: ['"Outfit"', "system-ui", "sans-serif"],
       },
     },
   },
