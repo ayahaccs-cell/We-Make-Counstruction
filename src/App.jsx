@@ -342,12 +342,25 @@ function Hero() {
         <h1 className="sr-only">We Make Constructions Co. WLL</h1>
 
         {/* 3. foreground subject, in front of the type */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-[11%] z-0 flex justify-center sm:bottom-[10%] lg:right-[8%] lg:left-0 lg:bottom-[1%]">
+        {/* building skyline: sky removed, sits behind the title, fades into the navy plate */}
+        <div className="pointer-events-none absolute -bottom-[2%] right-[-14%] -z-[15] h-[62%] sm:right-[2%] sm:h-[78%] lg:right-[-1%] lg:h-[84%] [mask-image:linear-gradient(to_right,transparent_0%,#000_30%)]">
+          <img
+            src="/images/hero-building.webp"
+            alt=""
+            aria-hidden="true"
+            className="hero-layer h-full w-auto max-w-none opacity-90 [filter:saturate(0.8)_brightness(0.85)] [mask-image:linear-gradient(to_bottom,transparent_0%,#000_22%,#000_100%)]"
+            style={{ "--k": 0.14 }}
+            loading="eager"
+          />
+        </div>
+
+        {/* subject: behind the title, head just below the letters */}
+        <div className="pointer-events-none absolute inset-x-0 -bottom-[3%] -z-[12] flex justify-center sm:-bottom-[4%] lg:right-[8%] lg:left-0 lg:-bottom-[9%]">
           <img
             src="/images/hero-cutout.png"
             alt="A We Make site engineer in a branded hard hat recording notes on site"
             className="hero-layer h-[58svh] w-auto max-w-none sm:h-[66svh] lg:h-[67svh]"
-            style={{ "--k": 0.06 }}
+            style={{ "--k": 0.08 }}
             loading="eager"
           />
         </div>
@@ -363,7 +376,7 @@ function Hero() {
               <a key={h} href={h} className="text-concrete-white/85 transition-colors hover:text-concrete-white">{l}</a>
             ))}
           </nav>
-          <a href="#contact" className="hidden pt-2 text-[10px] uppercase tracking-widest text-concrete-white/85 hover:text-concrete-white md:inline-flex md:items-center md:gap-1">
+          <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="hidden pt-2 text-[10px] uppercase tracking-widest text-concrete-white/85 hover:text-concrete-white md:inline-flex md:items-center md:gap-1">
             Request a quote <ArrowIcon size={11} />
           </a>
           <button type="button" className="pt-2 text-[10px] uppercase tracking-widest md:hidden" aria-expanded={open} aria-controls="mnav" onClick={() => setOpen((v) => !v)}>
@@ -375,6 +388,7 @@ function Hero() {
                 {NAV.map(([l, h]) => (
                   <li key={h}><a href={h} onClick={() => setOpen(false)}>{l}</a></li>
                 ))}
+                <li><a href={WHATSAPP} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Request a quote</a></li>
               </ul>
             </nav>
           )}
